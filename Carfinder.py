@@ -26,17 +26,23 @@ def searchForVehicles():
  Search = input("Search: ")
  file = open("availablevehicles.txt")
  filecontent = file.readlines()
+ SearchSuccessful = False
  #if Search == "Tesla" or Search == "tesla":
   #print(filecontent[2])
+  #SearchSuccessful = True
  if Search == "Ford" or Search == "ford":
   print(filecontent[0])
+  SearchSuccessful = True
  if Search == "Nissan" or Search == "nissan":
   print(filecontent[4])
+  SearchSuccessful = True
  if Search == "Toyota" or Search == "toyota":
   print(filecontent[3])
+  SearchSuccessful = True
  if Search == "Chevy" or Search == "chevy" or Search == "Chevrolet" or Search == "chevrolet":
   print(filecontent[1])
- else:
+  SearchSuccessful = True
+ if SearchSuccessful == False:
   print(Search, "is not an authorized vehicle. Please try again...")
 
 def menu():
